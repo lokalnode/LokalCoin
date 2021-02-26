@@ -1,0 +1,22 @@
+[Unit]
+Description=Lokal's distributed currency daemon
+After=network.target
+
+[Service]
+User=lokalcore
+Group=lokalcore
+
+Type=forking
+PIDFile=/var/lib/lokald/lokald.pid
+ExecStart=/usr/bin/lokald -daemon -pid=/var/lib/lokald/lokald.pid \
+-conf=/etc/lokalcore/lokal.conf -datadir=/var/lib/lokald -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

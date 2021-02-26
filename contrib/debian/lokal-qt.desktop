@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Lokal Coin
+Comment=Lokal P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Lokal peer-to-peer Netzwerk
+Comment[fr]=Lokal, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Lokal, eşten eşe kriptografik sanal para birimi
+Exec=lokal-qt %u
+Terminal=false
+Type=Application
+Icon=lokal128
+MimeType=x-scheme-handler/lokal;
+Categories=Office;Finance;
